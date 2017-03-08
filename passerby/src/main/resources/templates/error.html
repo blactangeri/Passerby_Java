@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天码营 - 实战开发技术学习服务平台</title>
+
+
+    <meta name="description" content="天码营是一个在线编程训练营，提供专业的实战课程、系统的课程指导服务和便捷的在线学习工具，帮助程序员在学习和职业生涯中快速成长，沉淀知识，实现个人价值。">
+    <meta name="keywords" content="Java ,天码营, 在线编程训练营, 编程实战, Java Web, Web 前端, Spring, Spring Boot, Spring MVC, NodeJS">
+
+    <meta name="author" content="TMY">
+    <link rel="shortcut icon" href="https://static.tianmaying.com/favicon.ico">
+
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical"
+          href="https://course.tianmaying.com/spring-mvc/p/_/blob/exception/src/main/resources/static/error/404.html"/>
+
+    <link rel="stylesheet" href="https://static.tianmaying.com/assets/tmy-4a01826c53.css">
+
+    <script src="https://static.tianmaying.com/assets/framework-7038d10251.js"></script>
+
+    <script src="https://static.tianmaying.com/assets/tmy-e9ef33f69c.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <div class="navbar navbar-inverse navbar-static-top" data-app="utils" id="tmy-navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#tmy-main-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1><a class="navbar-brand" href="https://www.tianmaying.com/"><img
+                        src="https://static.tianmaying.com/img/logo/logo.png">天码营</a></h1>
+            </div>
+            <div class="navbar-collapse collapse" id="tmy-main-navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">课程</a></li>
+                    <li><a href="https://www.tianmaying.com/tutorials">文章</a></li>
+                    <li><a href="https://www.tianmaying.com/topics">动态</a></li>
+                    <li><a href="https://www.tianmaying.com/qas">问答</a></li>
+                    <li><a href="https://www.tianmaying.com/snippets">代码</a></li>
+                    <li><a href="http://preview.tianmaying.com">工具</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown message-list" data-js="user/message">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-bell"></i>
+                            <span class="badge badge-danger" style="display: none;"></span>
+                        </a>
+
+                        <div class="dropdown-menu">
+                            <p class="empty-warning" style="display: none;">没有未读消息</p>
+
+                            <ul class="messages"></ul>
+
+                            <p class="message-btns">
+                                <a class="btn-read-all">全部设为已读</a>
+                                <a href="https://www.tianmaying.com/home/notifications">查看全部</a>
+                            </p>
+
+                            <ul class="activities">
+                            </ul>
+
+                        </div>
+                    </li>
+
+                    <li class="user-info">
+                        <a class="dropdown-toggle" href="/home">
+                            <img src="https://pic1.tianmaying.com/img/default-avatar.png">
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">lixuchen01 | 已登录</li>
+                            <li><a href="https://www.tianmaying.com/home"><i class="fa fa-fw fa-home"></i> 我的主页</a></li>
+                            <li><a href="/home"><i class="fa fa-fw fa-home"></i> 课程主页</a></li>
+                            <li><a href="/home/orders"><i class="fa fa-fw fa-shopping-cart"></i> 我的订单</a></li>
+                            <li><a href="https://www.tianmaying.com/home/notifications"><i class="fa fa-fw fa-bell"></i>
+                                消息提醒</a></li>
+                            <li><a href="https://www.tianmaying.com/home/account"><i class="fa fa-fw fa-cog"></i>
+                                账号设置</a></li>
+                            <li>
+                                <a href="https://www.tianmaying.com/account/logout">
+                                    <i class="fa fa-fw fa-sign-out"></i> 注销
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right" action="https://www.tianmaying.com/search" method="get">
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" name="key" placeholder="搜索">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container" id="error-page">
+
+        <h1 class="status" th:text="${statusCode}">404</h1>
+
+        <p class="title">出错了！</p>
+
+        <p class="description" th:text="${url}">
+            天码营未能找到您访问的页面。
+        </p>
+
+        <a href="/" class="btn btn-primary btn-sm">返回首页</a>
+
+    </div>
+
+</div>
+
+<script id="websocket" type="text/plain">https://www.tianmaying.com</script>
+
+<footer class="credit text-muted " data-app="utils">
+    <div id="footer-content" class="container">
+        <span>Copyright Tianmaying © 2016</span>
+        <span class="hidden-xs">
+      <span class="separator">|</span>
+      <span>京ICP备15008133号-1</span>
+      <span class="separator">|</span>
+      <a data-container="body" data-toggle="popover" data-html="true"
+         data-placement="top" data-trigger="hover" class="link"
+         data-content='
+           &lt;div&gt;
+             &lt;img src=&quot;http://assets0.tianmaying.com/img/qrcode-winxin.jpg&quot;
+               style=&quot;width:150px;height:150px;&quot;&gt;
+           &lt;/div&gt;
+         '>
+        <i class="fa fa-wechat"></i>
+        TMY-EDU
+      </a>
+      <span class="separator">|</span>
+      <a href="http://shang.qq.com/wpa/qunwpa?idkey=6cbe9f8835aa1aa6c62f4bceb585d415b9a7f710c4e7f0b20e424905cf3f7e27"
+         data-container="body" data-toggle="popover" data-html="true"
+         data-placement="top" data-trigger="hover" class="link"
+         data-content='
+           &lt;div&gt;
+             &lt;img style=&quot;width: 150px; height: 150px;&quot; src=&quot;http://assets0.tianmaying.com/img/qrcode-qq.png&quot;/&gt;
+           &lt;/div&gt;
+         '>
+        <i class="fa fa-qq"></i>
+        231216939
+      </a>
+      <span class="separator">|</span>
+      <a href="http://weibo.com/u/5623427244" target="_blank" class="link" rel="nofollow">
+        <i class="fa fa-weibo"></i>
+        天码营
+      </a>
+      <span class="separator">|</span>
+      <a href="http://weibo.com/u/5623427244" target="_blank" class="link">
+      <a href="https://www.tianmaying.com/terms-of-service" target="_blank" class="link" rel="nofollow">服务条款</a>
+      <span class="separator">|</span>
+      <a href="https://www.tianmaying.com/blog" target="_blank" class="link">官方博客</a>
+        <span class="separator">|</span>
+        <a href="https://www.tianmaying.com/shares" target="_blank" class="link">分享</a>
+        <span class="separator">|</span>
+        <a href="https://www.tianmaying.com/coders" target="_blank" class="link">TCoder</a>
+      <span class="separator">|</span>
+      <a class="link" href="https://www.tianmaying.com/links" target="_blank" rel="nofollow">友情链接</a>
+
+    <div class="modal fade" id="feedback" ng-controller="feedbackCtrl">
+        <div class="modal-dialog">
+            <form class="modal-content" name="feedbackForm">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title">反馈意见</h4>
+                </div>
+                <div class="modal-body"
+                     ng-class="{'has-error': feedbackForm.$invalid}">
+          <textarea name="content" class="form-control" rows="5"
+                    ng-model="content" autofocus required
+                    placeholder="请填写反馈意见"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm btn-wide" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary btn-sm btn-wide" ng-disabled="feedbackForm.$invalid"
+                            ng-click="sendFeedback()">提交
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</footer>
+
+
+<div class="bottom-div">
+
+    <!-- <div class="bottom-control" data-toggle="modal" data-target="#feedback">反馈意见</div> -->
+    <div class="bottom-control scroll-to-top"><i class="fa fa-chevron-up"></i></div>
+</div>
+
+
+<input type="hidden" id="username" value="lixuchen01">
+<input type="hidden" id="master-url" value="https://www.tianmaying.com/">
+
+</body>
+</html>
